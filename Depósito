@@ -1,0 +1,10 @@
+valor_inicial = float(input("Informe o valor inicial no desposito:"))
+taxa_juros = float(input("Informe a taxa de juros anual:"))
+quantidade_anos = int(input("Informe a quantidade de anos:"))
+juros_mensal = taxa_juros / 12 / 100
+valor_final = valor_inicial
+for mes in range(quantidade_anos*12):
+  valor_final= valor_final * (juros_mensal+1)
+total_juros = valor_final - valor_inicial
+print("O valor final final após {} anos, será de: {:.2f}" .format(quantidade_anos , valor_final))
+print("O total de juro vai se de:{:.2f}" .format (total_juros))
